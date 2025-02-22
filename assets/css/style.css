@@ -624,7 +624,56 @@ button, a { transition: var(--transition); }
 }
 
 .service-card:is(:hover, :focus) .card-link { color: var(--orange-soda); }
+.reverse-card {
+  position: relative;
+  background: white ;
+  text-align: center;
+  padding: 40px 30px;
+  box-shadow: var(--shadow-2);
+  border-radius: 50px;
+}
 
+.reverse-card .card-icon {
+  width: max-content;
+  margin-inline: auto;
+  margin-bottom: 20px;
+}
+
+.reverse-card .card-title { margin-bottom: 15px; }
+
+
+.reverse-card .card-text {
+  color: var(--cadet);
+  font-size: var(--fs-5);
+  line-height: 1.8;
+  margin-bottom: 25px;
+  align-items: flex-end;
+}
+
+.reverse-card .card-link {
+  color: var(--opal);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-600);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.reverse-card:hover{
+  background-image: linear-gradient(25deg, #0044f0,white);
+}
+.reverse-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  transition: var(--transition);
+}
+
+.reverse-card:is(:hover, :focus)::after { width: 100%; }
 .service-card::after {
   content: "";
   position: absolute;
