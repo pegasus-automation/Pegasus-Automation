@@ -75,7 +75,7 @@
   --shadow-2: 0 16px 32px hsla(188, 63%, 7%, 0.1);
 
 }
-a:link {
+a{
   color: white;
   background-color: transparent;
   text-decoration: none;
